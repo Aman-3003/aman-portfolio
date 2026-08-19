@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Srivastava — Data Engineer</title>
+<meta name="description" content="Aman Srivastava — Data Engineer. Building pipelines, APIs, and AI-driven systems. Explore projects, skills, and engineering approach.">
+<meta property="og:title" content="Aman Srivastava — Data Engineer">
+<meta property="og:description" content="Building pipelines, APIs, and AI-driven systems.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Signature pipeline thread -->
+<div class="pipeline-thread" aria-hidden="true">
+  <div class="track"></div>
+  <div class="fill" id="pipelineFill"></div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand"><span class="dot"></span> AS</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#thinking">How I Think</a>
+      <a href="#timeline">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-view-switch" role="tablist" aria-label="View switch">
+        <button class="active" id="viewPortfolioBtn" role="tab" aria-selected="true">Portfolio</button>
+        <button id="viewResumeBtn" role="tab" aria-selected="false">Resume</button>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#thinking">How I Think</a>
+    <a href="#timeline">Journey</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="portfolioView" class="portfolio-view">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <svg class="hero-bg" id="heroBg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <div class="container hero-inner">
+      <div class="hero-kicker"><span class="pulse"></span> DATA ENGINEER — INDIA</div>
+      <h1 id="heroName">Aman Srivastava</h1>
+      <p class="hero-statement" id="heroStatement"></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-flow-label">DATA <span>→</span> SYSTEMS <span>→</span> INTELLIGENCE</div>
+  </section>
+
+  <!-- SKILL ARCHITECTURE -->
+  <section class="section-pad" id="skills">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">Skill Architecture</div>
+        <h2 class="section-title">How the pieces connect, not just what I know</h2>
+        <p class="section-sub">An honest map — including what I'm still learning. Click a node to see details.</p>
+      </div>
+      <div class="legend reveal">
+        <div class="legend-item"><span class="legend-dot strong"></span> Strong</div>
+        <div class="legend-item"><span class="legend-dot comfortable"></span> Comfortable</div>
+        <div class="legend-item"><span class="legend-dot learning"></span> Learning now</div>
+      </div>
+      <div class="skill-tree-wrap reveal">
+        <svg id="skillTreeSvg" viewBox="0 0 1000 480"></svg>
+      </div>
+      <div class="skill-detail reveal" id="skillDetail">
+        <span class="placeholder">Click any node above to see how it's used →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section-pad" id="projects">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">Project Universe</div>
+        <h2 class="section-title">Things I've actually built end to end</h2>
+        <p class="section-sub">Filter by category, click into any project for the full technical story.</p>
+      </div>
+      <div class="filter-bar reveal" id="filterBar"></div>
+      <div class="project-grid reveal" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- HOW I THINK -->
+  <section class="section-pad" id="thinking">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">How I Think</div>
+        <h2 class="section-title">The process behind every project</h2>
+        <p class="section-sub">Hover a stage to see the thinking behind it.</p>
+      </div>
+      <div class="workflow-track reveal" id="workflowTrack"></div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="section-pad" id="dashboard">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">By the Numbers</div>
+        <h2 class="section-title">A live snapshot, not a highlight reel</h2>
+        <p class="section-sub">Only real, countable things — updated as they change.</p>
+      </div>
+      <div class="metric-grid reveal" id="metricGrid"></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section-pad" id="timeline">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">The Journey</div>
+        <h2 class="section-title">From first query to first pipeline</h2>
+      </div>
+      <div class="timeline reveal" id="timelineList"></div>
+    </div>
+  </section>
+
+  <!-- BEYOND THE RESUME + CURRENTLY BUILDING -->
+  <section class="section-pad" id="beyond">
+    <div class="container two-col">
+      <div class="reveal">
+        <div class="eyebrow">Beyond the Resume</div>
+        <h2 class="section-title">What actually drives this</h2>
+        <p class="bio-text" id="bioText"></p>
+      </div>
+      <div class="reveal">
+        <div class="photo-frame" id="photoFrame">Photo coming soon</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="building">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">Right Now</div>
+        <h2 class="section-title">Currently building</h2>
+      </div>
+      <div class="building-card reveal" id="buildingCard"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-pad contact-section" id="contact">
+    <div class="container">
+      <div class="eyebrow" style="justify-content:center;">Get in touch</div>
+      <h2 class="section-title">Let's build something worth measuring</h2>
+      <p class="section-sub">Open to data engineering and data-focused roles — reach out directly.</p>
+      <div class="contact-links" id="contactLinks"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- RESUME VIEW -->
+<main id="resumeView" class="resume-view">
+  <div class="container section-pad" style="padding-top:140px;">
+    <div class="eyebrow">Interactive Resume</div>
+    <h2 class="section-title" id="resumeName">Aman Srivastava</h2>
+    <p class="section-sub" id="resumeContact"></p>
+    <a href="#" class="btn btn-primary" id="resumeDownload" style="margin-bottom:56px; display:inline-flex;">Download PDF</a>
+
+    <div class="resume-block">
+      <h3>Profile</h3>
+      <p class="bio-text" id="resumeProfile"></p>
+    </div>
+
+    <div class="resume-block">
+      <h3>Projects</h3>
+      <div id="resumeProjects"></div>
+    </div>
+
+    <div class="resume-block">
+      <h3>Skills</h3>
+      <div id="resumeSkills"></div>
+    </div>
+
+    <div class="resume-block">
+      <h3>Education</h3>
+      <div id="resumeEducation"></div>
+    </div>
+
+    <div class="resume-block">
+      <h3>Certifications</h3>
+      <div id="resumeCerts"></div>
+    </div>
+  </div>
+</main>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close project details">✕</button>
+    <div class="modal-header">
+      <h2 id="modalTitle"></h2>
+      <p class="tagline" id="modalTagline"></p>
+    </div>
+    <div class="modal-links" id="modalLinks"></div>
+    <div class="modal-tabs" id="modalTabs"></div>
+    <div id="modalPanes"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">© <span id="year"></span> Aman Srivastava. Built as a living system — updated as new projects ship.</div>
+</footer>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
