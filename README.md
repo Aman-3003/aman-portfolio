@@ -16,7 +16,7 @@
 
 ### Skill Architecture
 
-![Skills Architecture](assets/screenshots/Skills%20Architecture.png)
+![Skills Architecture](assets/screenshots/skills-architecture.png)
 
 ### Projects
 
